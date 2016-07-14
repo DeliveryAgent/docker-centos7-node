@@ -13,7 +13,7 @@ RUN yum -y install make gcc gcc-c++ && yum -y clean all
 # Install NODE
 RUN mkdir /opt/node && \
     cd /opt/node && \
-    curl -LS https://nodejs.org/dist/${NODEJS_VERSION}/node-${NODEJS_VERSION}-linux-x64.tar.xz | tar xfJ - && \
+    curl -LSs https://nodejs.org/dist/${NODEJS_VERSION}/node-${NODEJS_VERSION}-linux-x64.tar.xz | tar xfJ - && \
     ln -sf  node-${NODEJS_VERSION}-linux-x64 current
 
 CMD ["npm", "start"]
