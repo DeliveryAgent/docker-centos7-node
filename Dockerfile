@@ -4,7 +4,7 @@ MAINTAINER Tommy McNeely <tommy@lark-it.com>
 #RUN yum -y install nodejs npm; \
 #    yum clean all
 
-ENV NODEJS_VERSION=v4.4.7 \
+ENV NODEJS_VERSION=v6.3.0 \
     PATH=/opt/node/current/bin:$PATH
 
 # I dislike adding a compiler to a production server
